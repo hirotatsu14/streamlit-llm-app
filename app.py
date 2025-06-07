@@ -12,10 +12,7 @@ from langchain.schema import SystemMessage, HumanMessage
 load_dotenv()
 api_key = os.getenv("OPENAI_API_KEY")
 
-llm = ChatOpenAI(
-    api_key=api_key,  # ここを openai_api_key→api_key に修正！
-    model="gpt-3.5-turbo"
-)
+llm = ChatOpenAI(model_name="gpt-3.5-turbo")
 
 def get_response(role, user_input):
     system_msg = f"あなたは{role}として振る舞ってください。"
