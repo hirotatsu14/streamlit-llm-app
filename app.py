@@ -12,7 +12,7 @@ load_dotenv()
 
 # APIキー取得
 api_key = os.getenv("OPENAI_API_KEY")
-llm = ChatOpenAI(openai_api_key=api_key, model_name="gpt-3.5-turbo")
+llm = ChatOpenAI(openai_api_key=api_key, model="gpt-3.5-turbo")
 
 # 関数定義
 def get_response(role, user_input):
